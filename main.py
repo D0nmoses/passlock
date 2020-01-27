@@ -1,6 +1,6 @@
 from user import User
-# print('hello world')
-# from credentials import Credentials
+
+from credentials import Credentials
 
 def createUser(username,password):
   '''
@@ -51,7 +51,14 @@ def register():
   else:
     register()
 
-  def createCredential(userAccount)
+  def createCredential(userAccount,userSite,password){
+    '''
+    createCredential method creates an instance of Credentials class
+    '''
+    newCred = Credentials(userAccount,userSite,password)
+  }
+
+  def saveCredential
   
   def menu():
     '''
@@ -69,7 +76,10 @@ def register():
     
     elif(menu_choice == "C" or menu_choice =="c"):
       print("Here you go \n")
-      viewCredentials()
+      Credentials.viewCredentials()
+      leave = input("Enter 1 to exit")
+      if(leave == "1"):
+        menu()
     
     elif(menu_choice == "D" or menu_choice == "d"):
       print("From which site do you wish to delete credentials?\n")
