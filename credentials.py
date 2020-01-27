@@ -3,7 +3,7 @@ class Credentials:
   '''
   class Credentials defines properties of a credential
   '''
-  credetials_list = []
+  credentials_list = []
 
   def __init__(self,userAccount,userSite,password):
     '''
@@ -17,12 +17,12 @@ class Credentials:
     '''
     method saveCredentials saves credential details to credentials list array
     '''
-    Credentials.credetials_list.append(self)
+    Credentials.credentials_list.append(self)
   
   @classmethod
   def viewCredentials(cls):
     '''
     method returns a list of all input credentials
     '''
-    return cls.credetials_list
+    return cls.credentials_list
   

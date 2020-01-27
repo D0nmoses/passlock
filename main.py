@@ -131,8 +131,9 @@ def menu():
     addAutoCredential()
   
   elif(menu_choice == "C" or menu_choice =="c"):
-    print("the password for {userSite} is {password} \n")
-    Credentials.viewCredentials()
+    print("Here are some credentials: \n")
+    creds = Credentials.viewCredentials()
+    print(creds)
     leave = input("Enter 1 to exit")
     if(leave == "1"):
       menu()
