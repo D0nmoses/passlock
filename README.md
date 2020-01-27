@@ -7,10 +7,11 @@ The project is a command line interface program that allows users to initally ei
 ## Setup/Installation Requirements
 To run this program, one requires python installed in their machine(3.6 or higher). Afterwards, run the command 'python3.6 main.py'
 ## Known Bugs
-The delet functionality does not work as expected
+The delete functionality does not work as expected as well as viewing credentials list
 ## Technologies Used
 The project was built using Visual Studio Code. Language used is Python.
 ## Code Grade
+[![codebeat badge](https://codebeat.co/badges/4ec70cd9-d141-49aa-8338-99caf755389a)](https://codebeat.co/projects/github-com-d0nmoses-passlock-master)
 
 In case of any issues, please forward them to gihinjidon@gmail.com and I will get in touch with further details.
 
