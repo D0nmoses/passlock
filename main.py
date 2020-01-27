@@ -1,10 +1,15 @@
 from user import User
 from credentials import Credentials
 
-print("********** Welcome to Password Locker **********")
-decision = input("Would you like to register or login? \n A: Register \n B: Login \n" )
+def createUser():
+  '''
+  createUser method creates an instance of class User
+  '''
+  new_user = User(username,password)
+  return new_user
 
-if(decision == "A" or decision == "a"):
-  register()
-else:
-  login()
+def saveUser():
+  '''
+  saveUser method saves the new user instance in user_list array
+  '''
+  User.
