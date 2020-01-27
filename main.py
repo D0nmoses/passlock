@@ -12,4 +12,10 @@ def saveUser():
   '''
   saveUser method saves the new user instance in user_list array
   '''
-  User.
+  User.saveUser(new_user)
+
+def checkUser():
+  '''
+  checkUser method verifies whether user credentials are correct to login
+  '''
+  

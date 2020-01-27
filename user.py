@@ -22,5 +22,15 @@ class  User:
     '''
     User.user_list.append()
 
+  @classmethod
+  def userExists(cls,username,password):
+    '''
+    userExists method checks whether user details exist in the user_list array
+    '''
+    for user in user_list:
+      if(user.username == username and user.password == password):
+        return True
+    
+
   
   
