@@ -120,6 +120,9 @@ def menu():
   '''
   method menu displays options for accessing features 
   '''
+  print("*"*40)
+  print("\n MENU \n")
+  print("*"*40)
   print("\n Pick a choice of what you would like to do: \nA:Add Credential with Custom Password \nB:Add Credential with Generated Password \nC:View all my credentials \nD:Delete some credentials")
   menu_choice = input()
   if(menu_choice == "A" or menu_choice == "a"):
