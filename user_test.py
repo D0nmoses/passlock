@@ -14,6 +14,12 @@ class TestUser(unittest.TestCase):
     Setup method to run before each test case
     '''
     self.new_user = User("Don","D0n")
+  
+  def tearDown(self):
+    '''
+    teardown method that does clean up after each test case
+    '''
+    User.user_list = []
 
   def test_init(self):
     '''
