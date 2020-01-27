@@ -1,6 +1,8 @@
+import random
+import pyperclip
 from user import User
-
 from credentials import Credentials
+
 
 def createUser(username,password):
   '''
@@ -82,6 +84,7 @@ def generatePassword():
 
     print ("Random password is \n")
     print(word)
+    return word
 
 def login():
   '''
@@ -112,14 +115,8 @@ def register():
   else:
     register()
 
-  def createCredential(userAccount,userSite,password){
-    '''
-    createCredential method creates an instance of Credentials class
-    '''
-    newCred = Credentials(userAccount,userSite,password)
-  }
+  
 
-  def saveCredential
   
   def menu():
     '''
@@ -145,6 +142,32 @@ def register():
     elif(menu_choice == "D" or menu_choice == "d"):
       print("From which site do you wish to delete credentials?\n")
       deleteCredentials()
+
+  def addCustomCredential():
+    userAccount = input("Please enter the username of your account \n")
+    userSite = input("Please enter the site the username is affiliated to \n")
+    password = input("Enter your preferred password: \n")
+    passwordAgain = input("Enter the password again: \n")
+    if(password == passwordAgain):
+      new_cred = createdCred(userAccount,userSite,password)
+      saveCred(new_cred)
+      print("Information saved")
+      menu()
+    else:
+      addCustomCredential()
+  
+  def addAutoCredential():
+    userAccount = input("Please enter the username of your account \n")
+    userSite = input("Please enter the site the username is affiliated to \n")
+    password = generatePassword()
+    if(password):
+      new_cred = createdCred(userAccount,userSite,password)
+      saveCred(new_cred)
+      print("Information saved")
+      menu()
+    else:
+      addAutoCredential()
+
 
 def main():
   # print('')
