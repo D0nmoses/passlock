@@ -55,16 +55,12 @@ class  User:
     menu_choice = print("What would you like to do today: \n A: View my credentials \n B: Add custom credential \n C: Add credential with auto-generated password \n D: Delete a credential")
     if(menu_choice == "A" or menu_choice == "a"):
       Credentials.viewCredentials()
-      menu()
     elif(menu_choice == "D" or menu_choice == "d"):
       Credentials.deleteCredential()
-      menu()
     elif(menu_choice == "B" pr menu_choice == "b"):
       Credentials.addCustomCredential()
-      menu()
     elif(menu_choice == "C" or menu_choice == "c"):
       Credentials.addAutoCredential()
-      menu()
 
   
   
