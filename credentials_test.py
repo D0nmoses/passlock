@@ -37,5 +37,17 @@ class TestUser(unittest.TestCase):
     self.new_cred.saveCredential() 
     self.assertEqual(len(Credentials.credentials_list),1)
 
+  def test_find_by_site_name(self):
+    '''
+    test_find_by_site_name test case to test if a specific credential can be found by site mentioned
+    '''
+    self.new_contact.save_contact()
+    test_cred = Credentials("Test","Testing","t3st")
+    test_cred.saveCredential()
+
+    found_cred = Credentials.findCredBySiteName("Testing")
+
+    self.assertEqual(found_cred.password,test_cred.password)
+
 if __name__ == "__main__":
   unittest.main()
