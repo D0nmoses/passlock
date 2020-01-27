@@ -22,6 +22,67 @@ def checkUser(username,password):
   isUser = User.userExists(username,password)
   return isUser
 
+def createCred(userAccount,userSite,password):
+  '''
+  method will create an instance of credentials
+  '''
+  new_cred = Credentials(userAccount,userSite,password)
+
+def saveCred(cred):
+  '''
+  method used to save credential to credentials list
+  ''' 
+  Credentials.saveCredential(cred)
+
+def generatePassword():
+  '''
+  method used to generate a random password
+  '''
+    symbol = 0
+    lower = 0
+    upper = 0
+    number = 0
+    count = 0
+    password = []
+
+    length = input("Hey, Welcome.How many characters do you want in your password? (default 8)\n")
+    length = 8 if length is '' else int(length)
+
+    while count < length:
+        rand = random.randint (0,3)
+        if rand == 0:
+            lower += 1
+            b = int(random.randint (97,123))
+            password.append(b)
+        elif rand == 1:
+            upper += 1
+            b = random.randint (65,91)
+            password.append(b)
+        elif rand == 2:
+            number += 1
+            b = random.randint (48,58)
+            password.append(b)
+        elif rand == 3:
+            r = random.randint(0,2)
+            symbol += 1
+            if r == 0:
+                b = random.randint (33,48)
+                password.append(b)
+            elif r == 1:
+                b = random.randint (91,97)
+                password.append(b)
+            elif r == 2:
+                b = random.randint (123,126)
+                password.append(b)
+        count +=
+
+    word = "".join([chr(c) for c in password])
+
+    pyperclip.copy(word)
+
+    print ("Random password is \n")
+    print(word)
+
 def login():
   '''
   login method verifies whether a user can login
