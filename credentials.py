@@ -26,3 +26,12 @@ class Credentials:
     '''
     return cls.credentials_list
   
+  @classmethod
+  def findCredBySiteName(cls,userSite):
+    '''
+    method findCredBySiteName returns the credential that matches the site passed
+    '''
+    for credential in cls.credentials_list:
+      if credential.userSite == userSite:
+        return credential
+  
