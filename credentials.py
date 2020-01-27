@@ -1,3 +1,4 @@
+
 class Credentials:
   '''
   class Credentials defines properties of a credential
@@ -24,5 +25,4 @@ class Credentials:
     method returns a list of all input credentials
     '''
     return cls.credetials_list
-  
   
