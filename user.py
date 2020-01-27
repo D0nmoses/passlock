@@ -1,5 +1,5 @@
 import csv
-from credentials import Credentials
+# from credentials import Credentials
 
 class  User:
   '''
@@ -16,21 +16,22 @@ class  User:
     self.username = username
     self.password = password
 
-  def saveUser():
+  def saveUser(self):
     '''
     saveUser method saves the user properties to user_list
     '''
-    User.user_list.append()
+    User.user_list.append(self)
 
   @classmethod
   def userExists(cls,username,password):
     '''
     userExists method checks whether user details exist in the user_list array
     '''
-    for user in user_list:
+    for user in User.user_list:
       if(user.username == username and user.password == password):
         return True
-    
+      else:
+        return False
 
   
   
